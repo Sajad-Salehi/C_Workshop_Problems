@@ -1,6 +1,6 @@
-/* https://leetcode.com/problems/goat-latin/
+/* 
 
-
+https://quera.org/problemset/8838/
 
 */
 
