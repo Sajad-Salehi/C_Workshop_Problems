@@ -1,37 +1,39 @@
 /* 
 
-
+https://quera.org/problemset/9109/
 
 */
 
 
+
 #include <stdio.h>
+int arr[100];
 
 int main()
 {
     
-    int n, max = 0, index = 0;
+    int n, x;
     scanf("%d", &n);
-    int arr[n];
     
-    
-    for(int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
+    for(int i=0; i < n; i++){
         
-    
-
-    
-    for(int i =0; i < n; i++){
-        
-        if(arr[i] > max){
-            
-            max = arr[i];
-            index = i;
-        }
-            
+        scanf("%d", &x);
+        arr[x] += 1;
     }
     
-    printf("%d", index + 1);
-}
+    int index = 1, current = 100;
 
+    
+    for(int i=1; i <= 100; i++){
+        
+
+        if(arr[i] < current && arr[i] != 0){
+            
+            current = arr[i];
+            index = i;
+        }
+    }   
+    
+    printf("%d", index);  
+}
 
